@@ -13,7 +13,6 @@ import {
   Instagram,
   Mail,
   MapPin,
-  Menu,
   PawPrint,
   Phone,
   Play,
@@ -25,7 +24,6 @@ import {
   Twitter,
   X,
 } from "lucide-react";
-import { useState } from "react";
 import heroImage from "@/assets/pet-hero.jpg";
 import aboutImage from "@/assets/pet-about.jpg";
 import offerImage from "@/assets/pet-offer.jpg";
@@ -84,8 +82,6 @@ function SectionTitle({ eyebrow, children }: { eyebrow: string; children: React.
 }
 
 function Index() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       <header className="site-header">
@@ -97,17 +93,21 @@ function Index() {
         <div className="nav-bar">
           <div className="page-shell nav-inner">
             <a className="brand" href="#inicio" aria-label="Pet Shop, início"><PawPrint aria-hidden="true" /><strong>PET SHOP</strong></a>
-            <nav className={menuOpen ? "main-nav main-nav-open" : "main-nav"} aria-label="Navegação principal">
-              <a href="#inicio" onClick={() => setMenuOpen(false)}>Início</a>
-              <a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre</a>
-              <a href="#servicos" onClick={() => setMenuOpen(false)}>Serviços</a>
-              <a href="#produtos" onClick={() => setMenuOpen(false)}>Produtos</a>
-              <a href="#planos" onClick={() => setMenuOpen(false)}>Planos <ChevronDown aria-hidden="true" /></a>
-              <a className="nav-contact" href="#contato" onClick={() => setMenuOpen(false)}>Contato <ArrowRight aria-hidden="true" /></a>
+            <nav className="main-nav" aria-label="Navegação principal">
+              <a href="#inicio">Início</a>
+              <a href="#sobre">Sobre</a>
+              <a href="#servicos">Serviços</a>
+              <a href="#produtos">Produtos</a>
+              <a href="#planos">Planos <ChevronDown aria-hidden="true" /></a>
+              <a className="nav-contact" href="#contato">Contato <ArrowRight aria-hidden="true" /></a>
             </nav>
-            <button className="menu-button" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} onClick={() => setMenuOpen(!menuOpen)}>
-              {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
-            </button>
+            <details className="mobile-menu">
+              <summary aria-label="Abrir menu"><span /><span /><span /></summary>
+              <nav aria-label="Navegação móvel">
+                <a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a>
+                <a href="#produtos">Produtos</a><a href="#planos">Planos</a><a href="#contato">Contato</a>
+              </nav>
+            </details>
           </div>
         </div>
       </header>
