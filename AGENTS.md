@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the Pet Shop as a single-page, section-based experience at `/` because the supplied reference is one continuous storefront page.
