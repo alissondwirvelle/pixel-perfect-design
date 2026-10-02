@@ -92,7 +92,7 @@ function Index() {
         </div>
         <div className="nav-bar">
           <div className="page-shell nav-inner">
-            <a className="brand" href="#inicio" aria-label="Pet Shop, início"><PawPrint aria-hidden="true" /><strong>PET SHOP</strong></a>
+            <a className="brand" href="#inicio" aria-label="Pet Shop, início"><PawPrint aria-hidden="true" /><strong>MIMO PET</strong></a>
             <nav className="main-nav" aria-label="Navegação principal">
               <a href="#inicio">Início</a>
               <a href="#sobre">Sobre</a>
@@ -117,7 +117,7 @@ function Index() {
         <div className="hero-shade" />
         <div className="page-shell hero-content">
           <span>Bem-vindo ao</span>
-          <h1>PET SHOP</h1>
+          <h1>MIMO PET</h1>
           <h2>SEU PET MAIS FELIZ</h2>
           <p>Cuidado, carinho e tudo o que seu melhor amigo precisa para viver bem.</p>
           <div className="hero-actions">
