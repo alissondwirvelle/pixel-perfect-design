@@ -6,7 +6,6 @@ import {
   Check,
   ChevronDown,
   CircleDollarSign,
-  Clock3,
   Facebook,
   HeartPulse,
   Home,
@@ -85,11 +84,6 @@ function Index() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       <header className="site-header">
-        <div className="utility-bar page-shell">
-          <div><Clock3 aria-hidden="true" /><span><b>Horário</b>Seg–Sáb, 8h às 19h</span></div>
-          <div><Mail aria-hidden="true" /><span><b>Fale conosco</b>oi@petshop.com</span></div>
-          <div><Phone aria-hidden="true" /><span><b>Telefone</b>(11) 3456-7890</span></div>
-        </div>
         <div className="nav-bar">
           <div className="page-shell nav-inner">
             <a className="brand" href="#inicio" aria-label="Pet Shop, início"><PawPrint aria-hidden="true" /><strong>MIMO PET</strong></a>
