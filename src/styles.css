@@ -195,7 +195,7 @@ a { color: inherit; text-decoration: none; }
   .mobile-menu[open] summary span:first-child { transform: translateY(7px) rotate(45deg); }
   .mobile-menu[open] summary span:nth-child(2) { opacity: 0; }
   .mobile-menu[open] summary span:last-child { transform: translateY(-7px) rotate(-45deg); }
-  .mobile-menu nav { position: absolute; z-index: 20; top: 64px; left: 0; right: 0; padding: 22px; background: var(--background); border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+  .mobile-menu nav { position: absolute; z-index: 20; top: 64px; left: 50%; right: auto; width: 100vw; transform: translateX(-50%); padding: 22px; background: var(--background); border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
   .mobile-menu nav a:last-child { padding: 14px; text-align: center; background: var(--primary); color: var(--primary-foreground); }
   .nav-bar { position: relative; }
   .hero { height: 560px; }
