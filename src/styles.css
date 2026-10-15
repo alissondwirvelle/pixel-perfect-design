@@ -72,11 +72,15 @@ a { color: inherit; text-decoration: none; }
 .section-title { border-left: 3px solid var(--primary); padding-left: 26px; margin-bottom: 36px; }
 .section-title span, .offer-content > span { color: var(--primary); text-transform: uppercase; font-weight: 700; font-size: 10px; }
 .section-title h2 { margin: 6px 0 0; font-size: clamp(24px, 3vw, 34px); line-height: 1.08; text-transform: uppercase; font-weight: 800; }
-.about-copy h3 { font-size: 14px; margin: 0 0 12px; }
-.about-copy > p { color: var(--muted-foreground); line-height: 1.8; font-size: 12px; }
+.about-copy .section-title span { font-size: 11px; }
+.about-copy .section-title h2 { font-size: clamp(26px, 3vw, 36px); }
+.about-copy h3 { font-size: 15px; margin: 0 0 12px; }
+.about-copy > p { color: var(--muted-foreground); line-height: 1.8; font-size: 13px; }
 .note-box { margin-top: 24px; background: var(--muted); padding: 23px 27px; border-left: 2px solid var(--primary); }
 .note-box b { color: var(--primary); font-size: 10px; }
+.about-copy .note-box b { font-size: 11px; }
 .note-box p { margin: 9px 0 0; font-size: 11px; color: var(--muted-foreground); line-height: 1.7; }
+.about-copy .note-box p { font-size: 12px; }
 
 .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 22px; }
 .service-card { background: var(--card); padding: 25px 30px; display: grid; grid-template-columns: 60px 1fr; gap: 24px; transition: translate .2s ease, box-shadow .2s ease; }
