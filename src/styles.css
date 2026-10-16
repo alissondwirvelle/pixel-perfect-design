@@ -40,6 +40,11 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id],
+footer[id] {
+  scroll-margin-top: 74px;
+}
+
 body {
   margin: 0;
   background: var(--background);
@@ -975,6 +980,11 @@ a {
 }
 
 @media (max-width: 800px) {
+  section[id],
+  footer[id] {
+    scroll-margin-top: 66px;
+  }
+
   .page-shell {
     width: min(100% - 28px, 620px);
   }

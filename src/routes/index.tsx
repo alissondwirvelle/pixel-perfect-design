@@ -86,6 +86,16 @@ const testimonials = [
   },
 ];
 
+function getTestimonial(index: number) {
+  const testimonial = testimonials[index];
+
+  if (!testimonial) {
+    throw new RangeError(`No testimonial exists at index ${index}.`);
+  }
+
+  return testimonial;
+}
+
 function SectionTitle({ eyebrow, children }: { eyebrow: string; children: React.ReactNode }) {
   return (
     <div className="section-title">
@@ -97,7 +107,7 @@ function SectionTitle({ eyebrow, children }: { eyebrow: string; children: React.
 
 function Index() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const testimonial = testimonials[activeTestimonial];
+  const testimonial = getTestimonial(activeTestimonial);
 
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
@@ -171,7 +181,7 @@ function Index() {
             <article className="product-card" key={product.name}>
               <img className="product-image" src={product.image} alt={product.name} />
               <h3>{product.name}</h3><p>{product.detail}</p><strong>{product.price}</strong>
-              <button className="product-button" type="button">Comprar</button>
+              <a className="product-button" href="#contato">Comprar</a>
             </article>
           ))}
         </div>
@@ -225,8 +235,8 @@ function Index() {
               <p>{testimonial.quote}</p>
               <strong>{testimonial.name}</strong><span>{testimonial.role}</span>
             </div>
-            <button className="quote-prev" type="button" aria-label="Depoimento anterior" onClick={() => setActiveTestimonial(0)}><ArrowLeft /></button>
-            <button className="quote-next" type="button" aria-label="Próximo depoimento" onClick={() => setActiveTestimonial(1)}><ArrowRight /></button>
+            <button className="quote-prev" type="button" aria-label="Depoimento anterior" onClick={() => setActiveTestimonial((current) => (current - 1 + testimonials.length) % testimonials.length)}><ArrowLeft /></button>
+            <button className="quote-next" type="button" aria-label="Próximo depoimento" onClick={() => setActiveTestimonial((current) => (current + 1) % testimonials.length)}><ArrowRight /></button>
           </div>
         </div>
       </section>
@@ -234,8 +244,8 @@ function Index() {
       <section className="section page-shell blog-section">
         <SectionTitle eyebrow="Últimas dicas">Conteúdos recentes<br />do nosso blog pet</SectionTitle>
         <div className="blog-grid">
-          <article><div className="blog-art blog-art-one"><HeartPulse /></div><div><span>Saúde • 12 set, 2026</span><h3>Como manter seu pet saudável em todas as fases</h3><p>Rotina, alimentação e carinho fazem toda a diferença.</p><a href="#contato" onClick={(event) => event.preventDefault()}>Leia mais <ArrowRight /></a></div></article>
-          <article><div className="blog-art blog-art-two"><Syringe /></div><div><span>Cuidados • 08 set, 2026</span><h3>Vacinas essenciais e quando aplicar</h3><p>Um guia rápido para proteger o seu melhor amigo.</p><a href="#contato" onClick={(event) => event.preventDefault()}>Leia mais <ArrowRight /></a></div></article>
+          <article><div className="blog-art blog-art-one"><HeartPulse /></div><div><span>Saúde • 12 set, 2026</span><h3>Como manter seu pet saudável em todas as fases</h3><p>Rotina, alimentação e carinho fazem toda a diferença.</p><a href="#contato">Leia mais <ArrowRight /></a></div></article>
+          <article><div className="blog-art blog-art-two"><Syringe /></div><div><span>Cuidados • 08 set, 2026</span><h3>Vacinas essenciais e quando aplicar</h3><p>Um guia rápido para proteger o seu melhor amigo.</p><a href="#contato">Leia mais <ArrowRight /></a></div></article>
         </div>
       </section>
 
@@ -244,7 +254,7 @@ function Index() {
           <div><h3>Entre em contato</h3><p>Seu pet merece o melhor. Fale com a nossa equipe.</p><ul><li><MapPin /> Rua das Flores, 123</li><li><Mail /> oi@petshop.com</li><li><Phone /> (11) 3456-7890</li></ul></div>
           <div><h3>Links rápidos</h3><a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#produtos">Produtos</a><a href="#contato">Contato</a></div>
           <div><h3>Links populares</h3><a href="#planos">Planos</a><a href="#servicos">Banho e tosa</a><a href="#servicos">Hospedagem</a><a href="#produtos">Ofertas</a></div>
-          <div><h3>Newsletter</h3><div className="newsletter"><input aria-label="Seu e-mail" type="email" placeholder="Seu e-mail" /><button type="button">Enviar</button></div><h3 className="follow-title">Siga a gente</h3><div className="socials"><a href="#contato" aria-label="Facebook"><Facebook /></a><a href="#contato" aria-label="Instagram"><Instagram /></a><a href="#contato" aria-label="Twitter"><Twitter /></a><a href="#contato" aria-label="LinkedIn"><Linkedin /></a></div></div>
+          <div><h3>Newsletter</h3><form className="newsletter" action="mailto:oi@petshop.com?subject=Inscri%C3%A7%C3%A3o%20na%20newsletter%20Pet%20Shop" method="post" encType="text/plain"><input aria-label="Seu e-mail" name="email" type="email" placeholder="Seu e-mail" required /><button type="submit">Enviar</button></form><h3 className="follow-title">Siga a gente</h3><div className="socials"><a href="#contato" aria-label="Facebook"><Facebook /></a><a href="#contato" aria-label="Instagram"><Instagram /></a><a href="#contato" aria-label="Twitter"><Twitter /></a><a href="#contato" aria-label="LinkedIn"><Linkedin /></a></div></div>
         </div>
         <div className="copyright"><div className="page-shell"><span>© 2026 Pet Shop. Todos os direitos reservados.</span><span>Desenvolvido por Avero Estúdio Digital</span></div></div>
       </footer>
