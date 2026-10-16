@@ -1,24 +1,21 @@
-# Pixel Perfect Design
+🐾 Mimo Pet
 
-crie uma aplicação web usando esse design como base, utilize react, typescript e tailwind. faça o mais proximo possivel da imagem
+Site institucional para uma marca do segmento pet, desenvolvido como projeto de estudo e portfólio. O objetivo é apresentar a marca, seus produtos e serviços, profissionais e conteúdos sobre cuidados com animais.
 
-This project was built with [Lovable](https://lovable.dev).
+✨ Funcionalidades
+Apresentação da marca Mimo Pet.
+Exibição de produtos para pets.
+Apresentação de serviços.
+Seção de profissionais.
+Blog com conteúdos sobre o universo pet.
+🛠️ Tecnologias e ferramentas
+React
+TypeScript
+Lovable
+🎯 Objetivo
 
-## Build with Lovable
+Projeto desenvolvido para fins de estudo e composição de portfólio, com foco na criação de uma interface visual para o segmento pet.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/6fa1efde-3483-4957-8547-ba25a861b2a3).
+🔗 Repositório
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+GitHub — Mimo Pet
