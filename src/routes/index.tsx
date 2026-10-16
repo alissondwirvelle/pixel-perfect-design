@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -26,7 +27,7 @@ import {
 import heroImage from "@/assets/pet-hero.jpg";
 import aboutImage from "@/assets/pet-about.jpg";
 import offerImage from "@/assets/pet-offer.jpg";
-import testimonialImage from "@/assets/pet-testimonial.jpg";
+const testimonialImage = "/images/banner-depoimentos.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -71,6 +72,19 @@ const team = [
   { name: "Luiza Alves", role: "Cuidadora", crop: "team-four", image: "/images/cuidadora.png" },
 ];
 
+const testimonials = [
+  {
+    quote: "“O cuidado da equipe é incrível. Meu cachorro volta sempre feliz, cheiroso e muito bem tratado. Viramos clientes de carteirinha!”",
+    name: "CAROLINA MELO",
+    role: "Cliente Pet Shop",
+  },
+  {
+    quote: "“Adoro o carinho e a atenção que meu pet recebe! Sempre volta para casa feliz e muito bem cuidado. Recomendo de olhos fechados!”",
+    name: "JULIANA MARTINS",
+    role: "Cliente Pet Shop",
+  },
+];
+
 function SectionTitle({ eyebrow, children }: { eyebrow: string; children: React.ReactNode }) {
   return (
     <div className="section-title">
@@ -81,6 +95,9 @@ function SectionTitle({ eyebrow, children }: { eyebrow: string; children: React.
 }
 
 function Index() {
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const testimonial = testimonials[activeTestimonial];
+
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       <header className="site-header">
@@ -199,14 +216,16 @@ function Index() {
       </section>
 
       <section className="testimonial">
-        <img src={testimonialImage} loading="lazy" width={1920} height={720} alt="Corgi correndo feliz em um parque" />
+        <img src={testimonialImage} loading="lazy" width={1920} height={720} alt="Golden retriever correndo feliz em um parque" />
         <div className="page-shell testimonial-inner">
           <div className="testimonial-card">
             <div className="client-avatar"><PawPrint aria-hidden="true" /></div>
-            <p>“O cuidado da equipe é incrível. Meu cachorro volta sempre feliz, cheiroso e muito bem tratado. Viramos clientes de carteirinha!”</p>
-            <strong>CAROLINA MELO</strong><span>Cliente Pet Shop</span>
-            <button className="quote-prev" type="button" aria-label="Depoimento anterior"><ArrowLeft /></button>
-            <button className="quote-next" type="button" aria-label="Próximo depoimento"><ArrowRight /></button>
+            <div className="testimonial-copy" key={activeTestimonial}>
+              <p>{testimonial.quote}</p>
+              <strong>{testimonial.name}</strong><span>{testimonial.role}</span>
+            </div>
+            <button className="quote-prev" type="button" aria-label="Depoimento anterior" onClick={() => setActiveTestimonial(0)}><ArrowLeft /></button>
+            <button className="quote-next" type="button" aria-label="Próximo depoimento" onClick={() => setActiveTestimonial(1)}><ArrowRight /></button>
           </div>
         </div>
       </section>
