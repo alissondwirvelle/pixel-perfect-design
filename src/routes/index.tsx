@@ -52,10 +52,10 @@ const services = [
 ];
 
 const products = [
-  { name: "Ração Natural", detail: "Frango & arroz", price: "R$ 119,90", tone: "product-bag-one" },
-  { name: "Ração Premium", detail: "Carne & vegetais", price: "R$ 139,90", tone: "product-bag-two" },
-  { name: "Mix Orgânico", detail: "Cães adultos", price: "R$ 129,90", tone: "product-bag-three" },
-  { name: "Receita Leve", detail: "Todas as raças", price: "R$ 99,90", tone: "product-bag-four" },
+  { name: "Ração Natural", detail: "Frango & arroz", price: "R$ 119,90", image: "/images/racao-natural.png" },
+  { name: "Ração Premium", detail: "Carne & vegetais", price: "R$ 139,90", image: "/images/racao-premium.png" },
+  { name: "Mix Orgânico", detail: "Cães adultos", price: "R$ 129,90", image: "/images/sache.png" },
+  { name: "Receita Leve", detail: "Todas as raças", price: "R$ 99,90", image: "/images/raca-pequenas.png" },
 ];
 
 const plans = [
@@ -151,12 +151,11 @@ function Index() {
         <div className="product-grid">
           {products.map((product) => (
             <article className="product-card" key={product.name}>
-              <div className={`product-bag ${product.tone}`}><PawPrint aria-hidden="true" /><span>PET FOOD</span><small>PREMIUM</small></div>
+              <img className="product-image" src={product.image} alt={product.name} />
               <h3>{product.name}</h3><p>{product.detail}</p><strong>{product.price}</strong>
             </article>
           ))}
         </div>
-        <div className="slider-buttons"><button type="button" aria-label="Produtos anteriores"><ArrowLeft /></button><button type="button" aria-label="Próximos produtos"><ArrowRight /></button></div>
       </section>
 
       <section className="offer-banner">
