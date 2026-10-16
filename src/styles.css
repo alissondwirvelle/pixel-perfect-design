@@ -632,41 +632,29 @@ a {
 }
 
 .team-portrait {
-  height: 205px;
+  aspect-ratio: 1;
   overflow: hidden;
   background: var(--muted);
 }
 
 .team-portrait img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.08);
-}
-
-.team-two img {
-  object-position: 65% center;
-  filter: hue-rotate(25deg);
-}
-
-.team-three img {
-  object-position: 30% center;
-  filter: saturate(.65);
-}
-
-.team-four img {
-  object-position: 75% center;
-  filter: sepia(.25);
+  object-position: center;
 }
 
 .team-card h3 {
-  font-size: 10px;
+  font-size: 13px;
+  font-weight: 700;
   text-transform: uppercase;
   margin: 16px 0 4px;
 }
 
 .team-card p {
-  font-size: 9px;
+  font-size: 12px;
+  font-weight: 600;
   margin: 0;
   color: var(--muted-foreground);
 }
@@ -1087,10 +1075,6 @@ a {
     gap: 16px;
   }
 
-  .team-portrait {
-    height: 175px;
-  }
-
   .testimonial {
     height: 500px;
   }
@@ -1142,10 +1126,6 @@ a {
 
   .team-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .team-portrait {
-    height: 145px;
   }
 
   .blog-grid article {

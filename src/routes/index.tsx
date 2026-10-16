@@ -65,10 +65,10 @@ const plans = [
 ];
 
 const team = [
-  { name: "Ana Martins", role: "Veterinária", crop: "team-one" },
-  { name: "Marina Costa", role: "Especialista em banho", crop: "team-two" },
-  { name: "Paulo Freitas", role: "Adestrador", crop: "team-three" },
-  { name: "Luiza Alves", role: "Cuidadora", crop: "team-four" },
+  { name: "Ana Martins", role: "Veterinária", crop: "team-one", image: "/images/veterinaria.png" },
+  { name: "Marina Costa", role: "Especialista em banho", crop: "team-two", image: "/images/especialhista-banho.png" },
+  { name: "Paulo Freitas", role: "Adestrador", crop: "team-three", image: "/images/adestrador.png" },
+  { name: "Luiza Alves", role: "Cuidadora", crop: "team-four", image: "/images/cuidadora.png" },
 ];
 
 function SectionTitle({ eyebrow, children }: { eyebrow: string; children: React.ReactNode }) {
@@ -191,7 +191,7 @@ function Index() {
         <div className="team-grid">
           {team.map((member) => (
             <article className="team-card" key={member.name}>
-              <div className={`team-portrait ${member.crop}`}><img src={aboutImage} loading="lazy" alt="" /></div>
+              <div className={`team-portrait ${member.crop}`}><img src={member.image} loading="lazy" alt="" /></div>
               <h3>{member.name}</h3><p>{member.role}</p>
             </article>
           ))}
