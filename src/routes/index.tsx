@@ -233,8 +233,8 @@ function Index() {
       <section className="section page-shell blog-section">
         <SectionTitle eyebrow="Últimas dicas">Conteúdos recentes<br />do nosso blog pet</SectionTitle>
         <div className="blog-grid">
-          <article><div className="blog-art blog-art-one"><HeartPulse /></div><div><span>Saúde • 12 set, 2026</span><h3>Como manter seu pet saudável em todas as fases</h3><p>Rotina, alimentação e carinho fazem toda a diferença.</p><a href="#contato">Leia mais <ArrowRight /></a></div></article>
-          <article><div className="blog-art blog-art-two"><Syringe /></div><div><span>Cuidados • 08 set, 2026</span><h3>Vacinas essenciais e quando aplicar</h3><p>Um guia rápido para proteger o seu melhor amigo.</p><a href="#contato">Leia mais <ArrowRight /></a></div></article>
+          <article><div className="blog-art blog-art-one"><HeartPulse /></div><div><span>Saúde • 12 set, 2026</span><h3>Como manter seu pet saudável em todas as fases</h3><p>Rotina, alimentação e carinho fazem toda a diferença.</p><a href="#contato" onClick={(event) => event.preventDefault()}>Leia mais <ArrowRight /></a></div></article>
+          <article><div className="blog-art blog-art-two"><Syringe /></div><div><span>Cuidados • 08 set, 2026</span><h3>Vacinas essenciais e quando aplicar</h3><p>Um guia rápido para proteger o seu melhor amigo.</p><a href="#contato" onClick={(event) => event.preventDefault()}>Leia mais <ArrowRight /></a></div></article>
         </div>
       </section>
 
