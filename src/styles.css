@@ -48,6 +48,19 @@ body {
   letter-spacing: 0;
 }
 
+h1,
+h4 {
+  font-family: "Sora", sans-serif;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-family: "Sora", sans-serif;
+}
+
 button,
 input {
   font: inherit;
@@ -189,13 +202,15 @@ a {
 .hero h2 {
   margin: 10px 0;
   font-size: clamp(19px, 2.1vw, 29px);
+  font-weight: 600;
   color: var(--secondary);
+  font-family: "Montserrat", sans-serif;
 }
 
 .hero p {
   max-width: 490px;
   line-height: 1.8;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .hero-actions {
