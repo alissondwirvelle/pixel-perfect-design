@@ -11,6 +11,7 @@ import {
   HeartPulse,
   Home,
   Instagram,
+  Linkedin,
   Mail,
   MapPin,
   PawPrint,
@@ -243,7 +244,7 @@ function Index() {
           <div><h3>Entre em contato</h3><p>Seu pet merece o melhor. Fale com a nossa equipe.</p><ul><li><MapPin /> Rua das Flores, 123</li><li><Mail /> oi@petshop.com</li><li><Phone /> (11) 3456-7890</li></ul></div>
           <div><h3>Links rápidos</h3><a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#produtos">Produtos</a><a href="#contato">Contato</a></div>
           <div><h3>Links populares</h3><a href="#planos">Planos</a><a href="#servicos">Banho e tosa</a><a href="#servicos">Hospedagem</a><a href="#produtos">Ofertas</a></div>
-          <div><h3>Newsletter</h3><div className="newsletter"><input aria-label="Seu e-mail" type="email" placeholder="Seu e-mail" /><button type="button">Enviar</button></div><h3 className="follow-title">Siga a gente</h3><div className="socials"><a href="#contato" aria-label="Facebook"><Facebook /></a><a href="#contato" aria-label="Instagram"><Instagram /></a><a href="#contato" aria-label="Twitter"><Twitter /></a></div></div>
+          <div><h3>Newsletter</h3><div className="newsletter"><input aria-label="Seu e-mail" type="email" placeholder="Seu e-mail" /><button type="button">Enviar</button></div><h3 className="follow-title">Siga a gente</h3><div className="socials"><a href="#contato" aria-label="Facebook"><Facebook /></a><a href="#contato" aria-label="Instagram"><Instagram /></a><a href="#contato" aria-label="Twitter"><Twitter /></a><a href="#contato" aria-label="LinkedIn"><Linkedin /></a></div></div>
         </div>
         <div className="copyright"><div className="page-shell"><span>© 2026 Pet Shop. Todos os direitos reservados.</span><span>Feito com carinho para quem ama animais.</span></div></div>
       </footer>

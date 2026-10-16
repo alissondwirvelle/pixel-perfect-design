@@ -832,7 +832,8 @@ a {
 .footer h3 {
   border-left: 2px solid var(--primary);
   padding-left: 10px;
-  font-size: 10px;
+  font-size: 13px;
+  font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 18px;
 }
@@ -840,7 +841,8 @@ a {
 .footer p,
 .footer a,
 .footer li {
-  font-size: 9px;
+  font-size: 12px;
+  font-weight: 600;
   color: var(--muted-foreground);
   line-height: 1.7;
 }
@@ -877,7 +879,7 @@ a {
   border: 1px solid var(--border);
   background: var(--background);
   padding: 10px;
-  font-size: 9px;
+  font-size: 12px;
   outline: none;
 }
 
@@ -886,9 +888,16 @@ a {
   background: var(--primary);
   color: var(--primary-foreground);
   padding-inline: 14px;
+  cursor: pointer;
   text-transform: uppercase;
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 700;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.newsletter button:active {
+  transform: scale(0.96);
+  filter: brightness(0.9);
 }
 
 .follow-title {
@@ -901,16 +910,27 @@ a {
 }
 
 .socials a {
-  width: 25px;
-  height: 25px;
+  width: 33px;
+  height: 33px;
   display: grid;
   place-items: center;
   border: 1px solid var(--primary);
   color: var(--primary);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.socials a:hover {
+  background: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .socials svg {
-  width: 12px;
+  width: 18px;
+  transition: transform 180ms ease;
+}
+
+.socials a:hover svg {
+  transform: scale(1.12) rotate(-6deg);
 }
 
 .copyright {
