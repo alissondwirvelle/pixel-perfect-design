@@ -625,7 +625,8 @@ a {
   color: oklch(0.62 0.21 25);
 }
 
-.price-card>a {
+.price-card>a,
+.price-card>button {
   background: var(--primary);
   color: var(--primary-foreground);
   font-size: 11px;
@@ -633,6 +634,8 @@ a {
   text-transform: uppercase;
   padding: 11px 17px;
   display: inline-flex;
+  border: 0;
+  cursor: pointer;
 }
 
 .team-section {

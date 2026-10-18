@@ -208,7 +208,7 @@ function Index() {
               <ul>
                 {["Banho e secagem", "Tosa higiênica", "Avaliação mensal", "Transporte gratuito"].map((feature, i) => <li key={feature}>{feature}{plan.features[i] ? <Check /> : <X />}</li>)}
               </ul>
-              <a href="#contato">Escolher plano</a>
+              <button type="button">Escolher plano</button>
             </article>
           ))}
         </div>
